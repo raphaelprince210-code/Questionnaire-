@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Questionnaire de découverte — Fistrack</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">QUESTIONNAIRE DE DÉCOUVERTE</p>
+
+      <h1>Projet Fistrack</h1>
+
+      <p>
+        Version adaptée aux étudiants — Projet existant en React JS —
+        Priorité à l’intégration de paiement pawaPay
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!--
+      Formulaire visible utilisé par l'utilisateur.
+      Netlify détecte ce formulaire grâce à data-netlify="true".
+    -->
+    <form
+      name="questionnaire-fistrack"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      id="fistrackForm"
+    >
+
+      <input
+        type="hidden"
+        name="form-name"
+        value="questionnaire-fistrack"
+      >
+
+      <!-- Champ anti-spam invisible -->
+      <p class="hidden">
+        <label>
+          Ne pas remplir ce champ :
+          <input name="bot-field">
+        </label>
+      </p>
+
+      <div id="formContent"></div>
+
+      <div class="form-navigation">
+
+        <button type="button" id="previousButton">
+          ← Précédent
+        </button>
+
+        <span id="progressText"></span>
+
+        <button type="button" id="nextButton">
+          Suivant →
+        </button>
+
+        <button type="submit" id="submitButton">
+          Envoyer le questionnaire
+        </button>
+
+      </div>
+
+    </form>
+
+    <!--
+      Formulaire caché de référence pour Netlify.
+      Il permet à Netlify de connaître tous les champs
+      générés ensuite par JavaScript.
+    -->
+    <form
+      name="questionnaire-fistrack-blueprint"
+      method="POST"
+      data-netlify="true"
+      hidden
+    >
+
+      <input
+        type="hidden"
+        name="form-name"
+        value="questionnaire-fistrack"
+      >
+
+      <input type="text" name="question_1">
+      <input type="text" name="question_2[]">
+      <input type="text" name="question_3">
+      <input type="text" name="question_4">
+      <input type="text" name="question_5">
+      <input type="text" name="question_6">
+      <input type="text" name="question_7[]">
+      <input type="text" name="question_8">
+      <input type="text" name="question_9">
+      <input type="text" name="question_10">
+      <input type="text" name="question_11">
+      <input type="text" name="question_12">
+      <input type="text" name="question_13">
+      <input type="text" name="question_14">
+      <input type="text" name="question_15">
+      <input type="text" name="question_16">
+      <input type="text" name="question_17">
+      <input type="text" name="question_18">
+      <input type="text" name="question_19">
+      <input type="text" name="question_20">
+      <input type="text" name="question_21">
+      <input type="text" name="question_22">
+      <input type="text" name="question_23">
+      <input type="text" name="question_24">
+      <input type="text" name="question_25">
+      <input type="text" name="question_26">
+      <input type="text" name="question_27">
+      <input type="text" name="question_28[]">
+      <input type="text" name="question_29">
+      <input type="text" name="question_30">
+      <input type="text" name="question_31">
+      <input type="text" name="question_32">
+      <input type="text" name="question_33">
+      <input type="text" name="question_34">
+      <input type="text" name="question_35[]">
+      <input type="text" name="question_36">
+      <input type="text" name="question_37">
+      <input type="text" name="question_38">
+      <input type="text" name="question_39">
+      <input type="text" name="question_40[]">
+      <input type="text" name="question_41">
+      <input type="text" name="question_42">
+
+    </form>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

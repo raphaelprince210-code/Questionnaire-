@@ -1,0 +1,236 @@
+/* =========================================
+   Réinitialisation générale
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f3f6fa;
+  color: #182532;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* =========================================
+   Conteneur principal
+========================================= */
+
+.container {
+  width: min(960px, 92%);
+  margin: 0 auto;
+}
+
+/* =========================================
+   En-tête
+========================================= */
+
+.hero {
+  padding: 55px 0 48px;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #102d47,
+    #167d98
+  );
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #d5f4f7;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.hero p:last-child {
+  max-width: 760px;
+  margin: 0;
+  color: #eafcff;
+}
+
+/* =========================================
+   Sections du questionnaire
+========================================= */
+
+.questionnaire-section {
+  margin: 28px 0;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 26px rgba(16, 45, 71, 0.08);
+}
+
+.questionnaire-section h2 {
+  margin-top: 0;
+  color: #12667e;
+  font-size: 1.45rem;
+}
+
+.objective {
+  margin: 18px 0 25px;
+  padding: 13px 16px;
+  background: #e8f6f8;
+  border-left: 4px solid #1599a8;
+  color: #244b58;
+}
+
+/* =========================================
+   Questions
+========================================= */
+
+.question {
+  padding: 22px 0;
+  border-top: 1px solid #e1e8ee;
+}
+
+.question:first-of-type {
+  border-top: none;
+}
+
+.question-title {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.question-hint {
+  margin: 0 0 12px;
+  color: #5d6c79;
+  font-size: 0.93rem;
+  font-style: italic;
+}
+
+/* =========================================
+   Champs de formulaire
+========================================= */
+
+.text-answer,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #c8d3dd;
+  border-radius: 8px;
+  background: white;
+  color: #182532;
+  font: inherit;
+}
+
+textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+
+.text-answer:focus,
+textarea:focus {
+  outline: none;
+  border-color: #167d98;
+  box-shadow: 0 0 0 3px rgba(22, 125, 152, 0.15);
+}
+
+.choice {
+  display: block;
+  margin: 9px 0;
+  cursor: pointer;
+}
+
+.choice input {
+  margin-right: 9px;
+  accent-color: #167d98;
+}
+
+/* =========================================
+   Navigation
+========================================= */
+
+.form-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0 40px;
+}
+
+button {
+  padding: 12px 19px;
+  border: none;
+  border-radius: 8px;
+  background: #12667e;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #0d4d60;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#submitButton {
+  display: none;
+  background: #15794f;
+}
+
+#submitButton:hover {
+  background: #105d3d;
+}
+
+#progressText {
+  color: #536675;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+/* =========================================
+   Classes utilitaires
+========================================= */
+
+.hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+/* =========================================
+   Version mobile
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+  .hero {
+    padding: 42px 0 38px;
+  }
+
+  .questionnaire-section {
+    padding: 21px;
+  }
+
+  .form-navigation {
+    flex-wrap: wrap;
+  }
+
+  #progressText {
+    width: 100%;
+    order: -1;
+    text-align: center;
+  }
+
+  .form-navigation button {
+    flex: 1;
+  }
+
+}
